@@ -16,6 +16,10 @@ app.get('/products', (req: Request, res: Response) => {
   res.render('pages/products');
 });
 
+app.get('/about', (req: Request, res: Response) => {
+  res.render('pages/about');
+});
+
 app.listen(PORT, HOST, () => {
   console.log(`Server is listening on host ${HOST} and port ${PORT}`);
 });
