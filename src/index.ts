@@ -12,6 +12,10 @@ app.get('/', (req: Request, res: Response) => {
   res.render('pages/index');
 });
 
+app.get('/products', (req: Request, res: Response) => {
+  res.render('pages/products');
+});
+
 app.listen(PORT, HOST, () => {
   console.log(`Server is listening on host ${HOST} and port ${PORT}`);
 });
