@@ -20,6 +20,10 @@ app.get('/about', (req: Request, res: Response) => {
   res.render('pages/about');
 });
 
+app.get('*', (req: Request, res: Response) => {
+  res.render('pages/404');
+});
+
 app.listen(PORT, HOST, () => {
   console.log(`Server is listening on host ${HOST} and port ${PORT}`);
 });
