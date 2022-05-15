@@ -1,0 +1,17 @@
+.mkr-product-card {
+  width: 100%;
+}
+
+.mkr-product-list li:not(:last-child) {
+  margin-block-end: 1rem;
+}
+
+@media (min-width: 992px) {
+  .mkr-product-card {
+    max-width: 25rem;
+  }
+
+  .mkr-product-list li:not(:last-child) {
+    margin-inline-end: 1rem;
+  }
+}
