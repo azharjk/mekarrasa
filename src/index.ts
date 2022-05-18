@@ -1,5 +1,7 @@
 import express, { Request, Response } from 'express';
 
+import { getProducts } from './db';
+
 const HOST = '0.0.0.0';
 const PORT = 5000;
 
@@ -7,6 +9,12 @@ const app = express();
 
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
+
+app.get('/api/v1/products', async (req: Request, res: Response) => {
+  const products = await getProducts();
+
+  res.json(products);
+});
 
 app.get('/', (req: Request, res: Response) => {
   res.render('pages/index');
