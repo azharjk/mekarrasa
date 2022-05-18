@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon src/index.ts",
     "table:create": "ts-node src/commands/create-table.ts",
-    "table:drop": "ts-node src/commands/drop-table.ts"
+    "table:drop": "ts-node src/commands/drop-table.ts",
+    "table:seed": "ts-node src/commands/seed-table.ts"
   },
   "author": "",
   "license": "ISC",
