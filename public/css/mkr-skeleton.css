@@ -1,0 +1,46 @@
+:root {
+  --skeleton-color: #eee;
+  --skeleton-animation: loading-skeleton 1s infinite alternate;
+}
+
+.mkr-skeleton-img {
+  width: 390px;
+  height: 300px;
+  background-color: var(--skeleton-color);
+  animation: var(--skeleton-animation);
+}
+
+.mkr-skeleton-text {
+  width: 100%;
+  height: 1.5rem;
+  background-color: var(--skeleton-color);
+  animation: var(--skeleton-animation);
+}
+
+.mkr-skeleton-text--md {
+  width: 60% !important;
+}
+
+.mkr-skeleton-btn {
+  width: 120px;
+  height: 2.5rem;
+  background-color: var(--skeleton-color);
+  animation: var(--skeleton-animation);
+}
+
+@keyframes loading-skeleton {
+  from {
+    opacity: .4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .mkr-skeleton-img {
+    width: 100%;
+  }
+}

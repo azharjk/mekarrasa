@@ -2,7 +2,7 @@ import sqlite3 from "sqlite3";
 
 import { SQLITE3_DB_PATH } from "./env";
 
-type Product = {
+export type Product = {
   id: number;
   title: string;
   description: string;

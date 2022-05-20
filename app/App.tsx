@@ -1,5 +1,7 @@
 import React from 'react';
 
-const App = () => <h1>Hello, world</h1>;
+import ProductList from './components/ProductList';
+
+const App = () => <ProductList />;
 
 export default App;
