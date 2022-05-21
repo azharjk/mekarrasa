@@ -10,7 +10,7 @@ const Showcase = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const res = await fetch("/api/v1/products");
+      const res = await fetch("/api/v1/showcase-products");
       const data = await res.json();
 
       setProducts(data);

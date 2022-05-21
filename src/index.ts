@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express';
 
-import { getProducts } from './db';
+import { getProducts, getShowcaseProducts } from './db';
 
 const HOST = '0.0.0.0';
 const PORT = 5000;
@@ -14,6 +14,12 @@ app.get('/api/v1/products', async (req: Request, res: Response) => {
   const products = await getProducts();
 
   res.json(products);
+});
+
+app.get('/api/v1/showcase-products', async (req: Request, res: Response) => {
+  const showcaseProducts = await getShowcaseProducts();
+
+  res.json(showcaseProducts);
 });
 
 app.get('/', (req: Request, res: Response) => {

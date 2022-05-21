@@ -8,7 +8,8 @@
     "server:start": "nodemon --ignore 'app/*.ts' src/index.ts",
     "table:create": "ts-node src/commands/create-table.ts",
     "table:drop": "ts-node src/commands/drop-table.ts",
-    "table:seed": "ts-node src/commands/seed-table.ts"
+    "table:seed": "ts-node src/commands/seed-table.ts",
+    "table:refresh": "npm run table:drop && npm run table:create && npm run table:seed"
   },
   "author": "",
   "license": "ISC",
