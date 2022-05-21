@@ -4,9 +4,12 @@ import { Configuration } from "webpack";
 const config: Configuration = {
   mode: "development",
   watch: true,
-  entry: "./app/index.tsx",
+  entry: {
+    showcase: './app/Showcase.tsx',
+    products: './app/Products.tsx'
+  },
   output: {
-    filename: "app.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "public/dist/"),
   },
   module: {
