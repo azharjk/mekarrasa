@@ -1,0 +1,24 @@
+.mkr-product-detail {
+  display: flex;
+  flex-direction: row;
+}
+
+.mkr-product-detail img {
+  max-width: 45rem;
+  height: 40rem;
+}
+
+.mkr-product-detail__title {
+  margin-block-end: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .mkr-product-detail {
+    flex-direction: column;
+  }
+
+  .mkr-product-detail img {
+    max-width: 100%;
+    height: auto;
+  }
+}

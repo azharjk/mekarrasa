@@ -35,3 +35,15 @@ export const getShowcaseProducts = () => {
     });
   });
 };
+
+export const getProduct = (id: number) => {
+  return new Promise<Product>((resolve, reject) => {
+    db.serialize(() => {
+      const sql = `SELECT * FROM products WHERE id = ${id}`;
+      db.get(sql, (err: Error, rows: Product) => {
+        if (err) reject(err);
+        resolve(rows);
+      });
+    });
+  });
+};
